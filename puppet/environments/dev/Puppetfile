@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+#^syntax detection
+
+forge "https://forgeapi.puppetlabs.com"
+
+# use dependencies defined in metadata.json
+#metadata
+
+# use dependencies defined in Modulefile
+# modulefile
+
+mod 'tykeal/sslmgmt',
+  :git => 'https://github.com/tykeal/puppet-sslmgmt.git',
+  :ref => 'bb13bc423b'
+
+mod 'puppetlabs-stdlib',
+  :git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git',
+  :ref => '4.7.0'
+
+mod 'puppetlabs-tomcat',
+  :git => 'https://github.com/puppetlabs/puppetlabs-tomcat.git',
+  :ref => '1.3.0'
+
+mod 'puppetlabs/apache',
+  :git => 'https://github.com/puppetlabs/puppetlabs-apache.git',
+  :ref => '1.3.0'
+
+mod 'puppetlabs/java',
+  :git => 'https://github.com/puppetlabs/puppetlabs-java.git',
+  :ref => '1.3.0'
+
+mod 'puppetlabs/postgresql',
+  :git => 'https://github.com/puppetlabs/puppetlabs-postgresql.git',
+  :ref => '4.1.0'
+
+mod 'puppet/archive',
+  :git => 'https://github.com/puppet-community/puppet-archive.git',
+  :ref => '5a93302c98'
+
+exclusion 'nanliu-staging'
+
+mod 'puppet/staging',
+  :git => 'https://github.com/puppet-community/puppet-staging.git',
+  :ref => '9cfcdd3e25'
+
+mod 'bambling/yumrepo',
+  :git => 'https://github.com/smbambling/bambling-yumrepo.git',
+  :ref => 'master'
+
+mod 'maestrodev/wget',
+  :git => 'https://github.com/maestrodev/puppet-wget.git',
+  :ref => 'v1.7.0'
+
+mod 'arin/jasperreports_server',
+  :git => 'https://github.com/arineng/arin-jasperreports_server.git',
+  :ref => 'master'

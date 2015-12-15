@@ -1,0 +1,22 @@
+---
+## PKI Certificate: example.dev Wildcard ##
+certs_for_system:
+  \*.example.dev-server:
+    pkistore: 'custom'
+    customstore: {
+                  certfilename: '/etc/pki/tls/certs/*.example.dev-server.crt',
+                  keyfilename: '/etc/pki/tls/private/*.example.dev-server.key'
+                 }
+ca_certs_for_system:
+ example_dev_internal_ca:
+   pkistore: 'custom'
+   customstore: {
+                 certfilename: '/etc/pki/tls/certs/example_dev_internal_ca.crt'
+                }
+
+
+# JasperReports Parameters
+jasperreports_server::pkg_version: '6.1.0'
+jasperreports_server::install::source_url: 'http://sourceforge.net/projects/jasperserver/files/JasperServer/JasperReports%20Server%20Community%20Edition%206.1.0/jasperreports-server-cp-6.1.0-bin.zip'
+#jasperreports_server::buildomatic_catalina_home: '/opt/apache-tomcat'
+#jasperreports_server::buildomatic_catalina_base: '/opt/apache-tomcat'
